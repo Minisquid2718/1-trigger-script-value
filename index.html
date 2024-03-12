@@ -10,7 +10,7 @@
 　+)ITEMTYPE　-　Loại vật phẩm<br>
 　+)CREATURE　-　Sinh vật <br>
 　+)ACTORID　-　Loại sinh vật<br>
-　+)CREATUREGROUP　-　Nhóm sinh vật<br>
+　+)CREATUREGROUP　-　Nhóm sinh vật<br><span style="color: blue"></span>
 　+)TIMER　-　Hẹn giờ<br>
 　+)EFFECTTYPE　-　Loại hiệu ứng đặc biệt<br>
 　+)SITEGROUP　-　Nhóm vị trí<br>
@@ -32,11 +32,15 @@
 <br>
 -Lấy biến trong trigger<br>
 　+)Loại biến:<br>
-　　　)local result,value = VarLib2:getGlobalVarByName(vartype,"name") --biến toàn cầu<br>
-　　　)local result,value = VarLib2:getPlayerVarByName(playerid, vartype,"name") --biến riêng<br>
+　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,value = VarLib2:getGlobalVarByName(vartype,<span style="color: green">"name"</span>)<span style="color: green">--biến toàn cầu</span></span><br>
+　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,value = VarLib2:getPlayerVarByName(playerid, vartype,<span style="color: green">"name"</span>)</span> <span style="color: green">--biến riêng</span><br>
 　+)Loại biến (nhóm):<br>
-　　　)local result,table = Valuegroup:getAllGroupItem(vartype,"name", playerid) --biến toàn cầu (playerid = 0) hoặc biến riêng (playerid<br>
+　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,table_ = Valuegroup:getAllGroupItem(vartype,<span style="color: green">"name"</span>, playerid) <span style="color: green">--biến toàn cầu (playerid = 0) hoặc biến riêng (playerid)</span></span><br>
 <br>
 -Đặt biến trong trigger:<br>
-　+)VarLib2:setGlobalVarByName(vartype,"name", val) --đặt biến toàn cầu<br>
-　+)VarLib2:setPlayerVarByName(playerid, vartype, "name", val) --đặt biến riêng<br></body></html>
+　+)<span style="font-family: 'Lucida Console', sans-serif; color: black">VarLib2:setGlobalVarByName(vartype,<span style="color: green">"name"</span>, val) --đặt biến toàn cầu</span><br>
+　+)<span style="font-family: 'Lucida Console', sans-serif; color: black">VarLib2:setPlayerVarByName(playerid, vartype, <span style="color: green">"name"</span>, val) --đặt biến riêng<br></span>
+<br>
+<br>
+Lastest update: 3/12/2024 (MM/DD/YYYY)<br>
+By MiniSquid (27187541)</body></html>
