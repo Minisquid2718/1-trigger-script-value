@@ -1,4 +1,19 @@
-<html><head></head><body>-Vartype<br>
+<html>
+<head>
+<title>Trigger value to script value</title>
+<script>
+function copyToClipboard(text) {
+  var tempInput = document.createElement('textarea');
+  tempInput.value = text;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempInput);
+  alert(text);
+}
+</script>
+</head>
+<body>-Vartype<br>
 　+)POSITION　-　Vị trí<br>
 　+)AREAINS　-　Khu vực<br>
 　+)NUMBER　-　Giá trị số<br>
@@ -10,7 +25,7 @@
 　+)ITEMTYPE　-　Loại vật phẩm<br>
 　+)CREATURE　-　Sinh vật <br>
 　+)ACTORID　-　Loại sinh vật<br>
-　+)CREATUREGROUP　-　Nhóm sinh vật<br><span style="color: blue"></span>
+　+)CREATUREGROUP　-　Nhóm sinh vật<br> 
 　+)TIMER　-　Hẹn giờ<br>
 　+)EFFECTTYPE　-　Loại hiệu ứng đặc biệt<br>
 　+)SITEGROUP　-　Nhóm vị trí<br>
@@ -32,15 +47,16 @@
 <br>
 -Lấy biến trong trigger<br>
 　+)Loại biến:<br>
-　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,value = VarLib2:getGlobalVarByName(vartype,<span style="color: green">"name"</span>)<span style="color: green">--biến toàn cầu</span></span><br>
-　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,value = VarLib2:getPlayerVarByName(playerid, vartype,<span style="color: green">"name"</span>)</span> <span style="color: green">--biến riêng</span><br>
+　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,value = VarLib2:getGlobalVarByName(vartype,<span style="color: green">name</span>)<span style="color: green">--biến toàn cầu</span></span><span onclick="copyToClipboard('local result,value = VarLib2:getGlobalVarByName(vartype,name)')" style="cursor: pointer;color: red">　Copy</span><br>
+　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,value = VarLib2:getPlayerVarByName(playerid, vartype,<span style="color: green">name</span>)</span> <span style="font-family: 'Lucida Console', sans-serif"><span style="color: green">--biến riêng</span></span><span onclick="copyToClipboard('local result,value = VarLib2:getPlayerVarByName(playerid, vartype,name)')" style="cursor: pointer;color: red">　Copy</span><br>
 　+)Loại biến (nhóm):<br>
-　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,table_ = Valuegroup:getAllGroupItem(vartype,<span style="color: green">"name"</span>, playerid) <span style="color: green">--biến toàn cầu (playerid = 0) hoặc biến riêng (playerid)</span></span><br>
+　　　)<span style="font-family: 'Lucida Console', sans-serif; color: black"><span style="color: blue">local</span> result,table_ = Valuegroup:getAllGroupItem(vartype,<span style="color: green">name</span>, playerid) <span style="color: green">--biến toàn cầu (playerid = 0) hoặc biến riêng (playerid)</span></span><span onclick="copyToClipboard('local result,table_ = Valuegroup:getAllGroupItem(vartype,name, playerid)')" style="cursor: pointer;color: red">　Copy</span><br>
 <br>
 -Đặt biến trong trigger:<br>
-　+)<span style="font-family: 'Lucida Console', sans-serif; color: black">VarLib2:setGlobalVarByName(vartype,<span style="color: green">"name"</span>, val) --đặt biến toàn cầu</span><br>
-　+)<span style="font-family: 'Lucida Console', sans-serif; color: black">VarLib2:setPlayerVarByName(playerid, vartype, <span style="color: green">"name"</span>, val) --đặt biến riêng<br></span>
+　+)<span style="font-family: 'Lucida Console', sans-serif; color: black">VarLib2:setGlobalVarByName(vartype,<span style="color: green">name</span>, val)<span style="color: green"> --đặt biến toàn cầu</span></span><span onclick="copyToClipboard('VarLib2:setGlobalVarByName(vartype,name, val)')" style="cursor: pointer;color: red">　Copy</span><br>
+　+)<span style="font-family: 'Lucida Console', sans-serif; color: black">VarLib2:setPlayerVarByName(playerid, vartype, <span style="color: green">name</span>, val)<span style="color: green"> --đặt biến riêng</span><br><span onclick="copyToClipboard('VarLib2:setPlayerVarByName(playerid, vartype, name, val)')" style="cursor: pointer;color: red">　Copy</span></span>
 <br>
 <br>
-Lastest update: 3/12/2024 (MM/DD/YYYY)<br>
+Lastest update: 3/15/2024 (MM/DD/YYYY)<br>
 By MiniSquid (27187541)</body></html>
+
